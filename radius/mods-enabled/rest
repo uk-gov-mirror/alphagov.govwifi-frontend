@@ -4,6 +4,9 @@ rest {
         #verify_cert_cn = yes
         cacertdir = /etc/raddb/certs
         cacertfile = comodoCA.pem
+        private_key_password = whatever
+        private_key_file = ${cacertdir}/client.key
+        certificate_file = ${cacertdir}/client.pem
     }
 
     authorisation_api_base_url = "$ENV{AUTHORISATION_API_BASE_URL}"
